@@ -4,5 +4,9 @@ users: list[dict] = [
     {'Name': 'Daria', 'Location': 'Łosice', 'Posts': 200, }
 ]
 
-for user in users:
-    print(f'Twój znajomy: {user["Name"]} z: {user["Location"]} opublikował: {user["Posts"]}')
+
+def get_user_info(users_data: list[dict])->None:
+    for user in users:
+        print(f'Twój znajomy: {user["Name"]} z: {user["Location"]} opublikował: {user["Posts"]}')
+
+get_user_info(users)
